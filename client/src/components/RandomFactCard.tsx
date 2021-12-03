@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, CardContent, Card, CardMedia } from '@mui/material';
+import { Typography, CardContent, Card, CardMedia, Button, CardActions } from '@mui/material';
 
 interface RandomFactProps {
   fact: string;
@@ -7,10 +7,13 @@ interface RandomFactProps {
 
 const RandomFactCard: React.FC<RandomFactProps> = ({ fact }) => {
   return (
-    <Card sx={{ width: 300, height: 400 }}>
+    <Card sx={{ display: 'flex', flexDirection: 'column', width: 300, height: 400 }}>
       <CardMedia
         component="img"
         height="150"
+        /* NOTE: The url is appended with a unique query string to
+                 circumvent caching. Since the url is the same 
+                 otherwise, browsers would only generate 1 image. */
         image={`https://picsum.photos/300/200?${Date.now()}`}
         alt="A randomly generated image"
       />
@@ -20,6 +23,14 @@ const RandomFactCard: React.FC<RandomFactProps> = ({ fact }) => {
         </Typography>
         <Typography variant="body1">{fact}</Typography>
       </CardContent>
+      <CardActions sx={{ flex: '1 0 auto', justifyContent: 'flex-end', alignItems: 'flex-end' }}>
+        <Button variant="contained" color="primary">
+          Nice!
+        </Button>
+        <Button variant="contained" color="error">
+          Meh.
+        </Button>
+      </CardActions>
     </Card>
   );
 };

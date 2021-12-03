@@ -1,17 +1,13 @@
 import React, { useEffect } from 'react';
-import useStyles from './useStyles';
 import { useAuth } from '../../context/useAuthContext';
 import { useSocket } from '../../context/useSocketContext';
 import { useHistory } from 'react-router-dom';
 import { CircularProgress, Typography, Grid } from '@mui/material';
-import { Box } from '@mui/system';
 import { Navbar } from '../../components/Navbar';
 import { RandomFactCard } from '../../components/RandomFactCard';
 import { facts } from '../../mocks/mockFacts';
 
 export default function Dashboard(): JSX.Element {
-  const classes = useStyles();
-
   const { loggedInUser } = useAuth();
   const { initSocket } = useSocket();
   const history = useHistory();
@@ -31,7 +27,7 @@ export default function Dashboard(): JSX.Element {
     <>
       <Navbar />
       <Grid sx={{ padding: 5 }} container rowSpacing={5} columnSpacing={2}>
-        <Grid item xs={12} sx={{ justifyContent: 'center' }}>
+        <Grid item xs={12}>
           <Typography variant="h4" component="h1">
             Welcome!
           </Typography>
