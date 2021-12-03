@@ -91,9 +91,31 @@ export default function Dashboard(): JSX.Element {
           )}
         </Toolbar>
       </AppBar>
-      <Grid container spacing={2}>
+      <Grid sx={{ padding: 5 }} container spacing={2}>
+        <Grid item xs={12} justifyContent="center">
+          <Typography variant="h4" component="h1">
+            Welcome!
+          </Typography>
+        </Grid>
         <Grid item xs={4}>
-          <Card sx={{ flex: '1 0 auto' }}>
+          <Box sx={{ height: 100, bgcolor: '#26262B', borderRadius: '5px' }} />
+        </Grid>
+        <Grid item xs={4}>
+          <Box sx={{ height: 100, bgcolor: '#26262B', borderRadius: '5px' }} />
+        </Grid>
+        <Grid item xs={4}>
+          <Box sx={{ height: 100, bgcolor: '#26262B', borderRadius: '5px' }} />
+        </Grid>
+        <Grid item xs={4}>
+          <Box sx={{ height: 100, bgcolor: '#26262B', borderRadius: '5px' }} />
+        </Grid>
+        <Grid item xs={4}>
+          <Box sx={{ height: 100, bgcolor: '#26262B', borderRadius: '5px' }} />
+        </Grid>
+        <Grid item xs={4}>
+          <Box sx={{ height: 100, bgcolor: '#26262B', borderRadius: '5px' }} />
+        </Grid>
+        {/* <Card sx={{ flex: '1 0 auto' }}>
             <CardMedia
               component="img"
               height="140"
@@ -109,8 +131,7 @@ export default function Dashboard(): JSX.Element {
                 dates back to 1720, and was made by an Italian man named Bartolomeo Cristofori?
               </Typography>
             </CardContent>
-          </Card>
-        </Grid>
+          </Card> */}
       </Grid>
     </>
   );
