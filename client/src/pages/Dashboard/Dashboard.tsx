@@ -29,7 +29,7 @@ export default function Dashboard(): JSX.Element {
       <Grid sx={{ padding: 5 }} container rowSpacing={5} columnSpacing={2}>
         <Grid item xs={12}>
           <Typography variant="h4" component="h1">
-            Welcome!
+            Welcome to random facts!
           </Typography>
         </Grid>
         {facts.map(({ id, fact }) => (
