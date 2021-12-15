@@ -32,9 +32,9 @@ export default function Dashboard(): JSX.Element {
             Welcome to random facts!
           </Typography>
         </Grid>
-        {facts.map(({ id, fact }) => (
+        {facts.map(({ id, fact, coverUrl: cover }) => (
           <Grid item key={id} xs={4} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <RandomFactCard fact={fact} />
+            <RandomFactCard fact={fact} cover={cover} />
           </Grid>
         ))}
       </Grid>
