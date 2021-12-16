@@ -9,15 +9,15 @@ interface RandomFactProps {
 
 const RandomFactCard: React.FC<RandomFactProps> = ({ fact, cover }) => {
   return (
-    <Card sx={{ display: 'flex', flexDirection: 'column', width: 300, height: 400 }}>
+    <Card sx={{ display: 'flex', flexDirection: 'column', height: 400 }}>
       <CardMedia component="img" height="150" image={cover} alt="A randomly generated cover image" />
-      <CardContent sx={{ maxHeight: 200, overflowY: 'auto' }}>
+      <CardContent sx={{ flex: '1 0 0', overflowY: 'auto' }}>
         <Typography variant="h5" component="h6" color="text.secondary">
           Did you know that,
         </Typography>
         <Typography variant="body1">{fact}</Typography>
       </CardContent>
-      <CardActions sx={{ flex: '1 0 auto', justifyContent: 'flex-end', alignItems: 'flex-end' }}>
+      <CardActions sx={{ flex: '0 0 %20', justifyContent: 'flex-end', alignItems: 'flex-end' }} disableSpacing>
         <IconButton color="primary" size="large">
           <UpvoteIcon />
         </IconButton>
