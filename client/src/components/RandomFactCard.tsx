@@ -1,5 +1,6 @@
 import React from 'react';
-import { Typography, CardContent, Card, CardMedia, Button, CardActions } from '@mui/material';
+import { Typography, CardContent, Card, CardMedia, CardActions, IconButton } from '@mui/material';
+import { ThumbUp as UpvoteIcon, ThumbDown as DownvoteIcon } from '@mui/icons-material/';
 
 interface RandomFactProps {
   fact: string;
@@ -17,12 +18,12 @@ const RandomFactCard: React.FC<RandomFactProps> = ({ fact, cover }) => {
         <Typography variant="body1">{fact}</Typography>
       </CardContent>
       <CardActions sx={{ flex: '1 0 auto', justifyContent: 'flex-end', alignItems: 'flex-end' }}>
-        <Button variant="contained" color="primary">
-          Nice!
-        </Button>
-        <Button variant="contained" color="error">
-          Meh.
-        </Button>
+        <IconButton color="primary" size="large">
+          <UpvoteIcon />
+        </IconButton>
+        <IconButton color="error" size="large">
+          <DownvoteIcon />
+        </IconButton>
       </CardActions>
     </Card>
   );
