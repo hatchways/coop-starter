@@ -12,7 +12,6 @@ const facts = [
   {
     id: 2,
     coverUrl: 'https://i.picsum.photos/id/11/300/200.jpg?hmac=6SP5eX4k81ZBSHriZ6PW920MAXpAtNuM0968EkRSs5Y',
-
     fact: '30 Rock was known for its fast-paced writing. In 2014, one reporter calculated that there was an average of 7.44 jokes per minute.',
   },
   {
